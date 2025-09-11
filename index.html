@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Universitaria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Universidad</h1>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acerca">Acerca</a></li>
+        <li><a href="#materias">Materias</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h2>Bienvenido a la Universidad</h2>
+    <p>Formando profesionales con excelencia académica.</p>
+  </section>
+
+  <section id="acerca">
+    <h2>Acerca de Nosotros</h2>
+    <p>Somos una institución comprometida con la educación, investigación y desarrollo.</p>
+  </section>
+
+  <section id="materias">
+    <h2>Materias</h2>
+    <div class="grid">
+      <div class="card">Matemáticas</div>
+      <div class="card">Física</div>
+      <div class="card">Química</div>
+      <div class="card">Electrónica</div>
+    </div>
+  </section>
+
+  <section id="eventos">
+    <h2>Eventos</h2>
+    <ul>
+      <li>Semana de la Ciencia - Octubre</li>
+      <li>Feria Tecnológica - Noviembre</li>
+      <li>Jornadas Académicas - Diciembre</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu correo" required>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMsg"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Universidad. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
