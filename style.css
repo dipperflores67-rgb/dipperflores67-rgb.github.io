@@ -129,12 +129,22 @@ footer {
 
 /* ✅ Estilos para imágenes nuevas */
 
-/* Logo pequeño en el header */
-.logo-img {
-  height: 60px;
-  margin-right: 15px;
-  vertical-align: middle;
+.logo-container {
+  display: flex;          /* Alinea los elementos en fila */
+  align-items: center;    /* Centra verticalmente la imagen y el texto */
+  gap: 10px;              /* Espacio entre la imagen y el texto (puedes ajustar) */
 }
+
+.logo-img {
+  width: 60px;            /* Ajusta tamaño de la imagen si es necesario */
+  height: auto;
+}
+
+.logo {
+  margin: 0;              /* Quita márgenes por defecto del h1 */
+  font-size: 1.5rem;      /* Ajusta tamaño de texto si quieres */
+}
+
 
 /* Imagen grande en inicio */
 .facultad-img {
@@ -166,6 +176,7 @@ footer {
     display: block;
   }
 }
+
 
 
 
