@@ -66,9 +66,35 @@ section {
 }
 
 .card {
-  background: #eee;
-  padding: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card a {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: #ffcc00;   /* 🎨 Amarillo */
+  color: #000;           /* Texto en negro para contraste */
+  text-decoration: none;
   border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card a:hover {
+  background: #e6b800;   /* Amarillo un poco más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de "crecimiento" */
 }
 
 form {
@@ -138,3 +164,4 @@ footer {
     display: block;
   }
 }
+
