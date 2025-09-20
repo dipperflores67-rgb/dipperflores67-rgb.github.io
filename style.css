@@ -16,16 +16,18 @@ header {
   background: #003366;
   color: #fff;
   padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
+header nav {
+  display: flex;
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  align-items: center;
+}
 /* 🔹 Contenedor logo + nombre */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px; /* espacio entre imagen y texto */
+  gap: 10px; /* espacio entre imagen y texto */
 }
 
 .logo-img {
@@ -34,29 +36,23 @@ header {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
   margin: 0;
+  font-size: 1.5rem;
 }
 
 /* 🔹 Navegación */
-nav {
-  display: flex;
-  align-items: center;
-  gap: 2rem; /* espacio entre logo/nombre y menú */
-}
 
 .nav-links {
   list-style: none;
-  display: flex;          /* ✅ Asegura que esté en fila */
-  flex-direction: row;    /* ✅ Fuerza fila */
-  gap: 1.5rem;            /* espacio entre enlaces */
+  display: flex;          /* 🔹 Menú en fila */
+  flex-direction: row;
+  gap: 1.5rem;            /* Espacio entre enlaces */
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  list-style: none;       /* ✅ Quita los puntitos */
+  list-style: none;
 }
 
 .nav-links li a {
@@ -191,5 +187,6 @@ footer {
     display: block;
   }
 }
+
 
 
