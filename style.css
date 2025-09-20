@@ -43,12 +43,20 @@ header {
 nav {
   display: flex;
   align-items: center;
+  gap: 2rem; /* espacio entre logo/nombre y menú */
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  display: flex;          /* ✅ Asegura que esté en fila */
+  flex-direction: row;    /* ✅ Fuerza fila */
+  gap: 1.5rem;            /* espacio entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;       /* ✅ Quita los puntitos */
 }
 
 .nav-links li a {
@@ -60,7 +68,6 @@ nav {
 .nav-links li a:hover {
   text-decoration: underline;
 }
-
 /* 🔹 Botón menú en móviles */
 .menu-toggle {
   display: none;
@@ -184,4 +191,5 @@ footer {
     display: block;
   }
 }
+
 
