@@ -11,43 +11,67 @@ body {
   color: #333;
 }
 
+/* 🔹 Encabezado */
 header {
   background: #003366;
   color: #fff;
-  padding: 1rem;
-}
-
-nav {
+  padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* 🔹 Contenedor logo + nombre */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espacio entre imagen y texto */
+}
+
+.logo-img {
+  width: 50px;
+  height: auto;
+}
+
 .logo {
   font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 🔹 Navegación */
+nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-links li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
 }
 
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Botón menú en móviles */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: white;
   cursor: pointer;
 }
 
-/* Secciones */
+/* 🔹 Secciones */
 section {
   padding: 2rem;
   text-align: center;
@@ -58,6 +82,7 @@ section {
   padding: 4rem 2rem;
 }
 
+/* 🔹 Tarjetas */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -81,11 +106,12 @@ section {
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
+/* 🔹 Botones amarillos estilo logo */
 .card a {
   display: inline-block;
   padding: 0.8rem 1.4rem;
   background: #ffcc00;    /* Amarillo eléctrico */
-  color: #003366;         /* Azul oscuro para contraste */
+  color: #003366;         /* Azul oscuro */
   text-decoration: none;
   border-radius: 10px;
   font-weight: bold;
@@ -98,7 +124,7 @@ section {
   transform: scale(1.08); /* Pequeño zoom */
 }
 
-
+/* 🔹 Formularios */
 form {
   display: flex;
   flex-direction: column;
@@ -119,6 +145,7 @@ button {
   cursor: pointer;
 }
 
+/* 🔹 Footer */
 footer {
   text-align: center;
   background: #003366;
@@ -127,26 +154,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* ✅ Estilos para imágenes nuevas */
-
-.logo-container {
-  display: flex;          /* Alinea los elementos en fila */
-  align-items: center;    /* Centra verticalmente la imagen y el texto */
-  gap: 10px;              /* Espacio entre la imagen y el texto (puedes ajustar) */
-}
-
-.logo-img {
-  width: 60px;            /* Ajusta tamaño de la imagen si es necesario */
-  height: auto;
-}
-
-.logo {
-  margin: 0;              /* Quita márgenes por defecto del h1 */
-  font-size: 1.5rem;      /* Ajusta tamaño de texto si quieres */
-}
-
-
-/* Imagen grande en inicio */
+/* 🔹 Imagen de portada */
 .facultad-img {
   width: 100%;
   max-height: 400px;
@@ -155,7 +163,7 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Responsivo */
+/* 🔹 Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -176,7 +184,4 @@ footer {
     display: block;
   }
 }
-
-
-
 
