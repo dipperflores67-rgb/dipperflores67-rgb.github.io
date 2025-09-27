@@ -23,8 +23,9 @@ header nav {
   justify-content: space-between; /* logo a la izquierda, menú a la derecha */
   align-items: center;
 }
+
 /* 🔹 Contenedor logo + nombre */
-.logo-container {
+.logo-nombre {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,13 +37,13 @@ header nav {
   height: auto;
 }
 
-.logo {
+.logo-text {
   margin: 0;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* 🔹 Navegación */
-
 .nav-links {
   list-style: none;
   display: flex;          /* 🔹 Menú en fila */
@@ -65,6 +66,7 @@ header nav {
 .nav-links li a:hover {
   text-decoration: underline;
 }
+
 /* 🔹 Botón menú en móviles */
 .menu-toggle {
   display: none;
@@ -167,27 +169,37 @@ footer {
   margin-bottom: 20px;
 }
 
-/* 🔹 Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #002244;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+/* 🔹 Galería / Carrusel */
+.galeria {
+  text-align: center;
+  padding: 2rem;
 }
+
+.slider {
+  position: relative;
+  max-width: 600px;   /* ancho máximo del carrusel */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.imagenes img {
+  width: 100%;
+  flex-shrink: 0;   /* evita que se deformen */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0
+
 
 
 
