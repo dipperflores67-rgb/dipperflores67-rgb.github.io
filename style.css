@@ -200,6 +200,27 @@ footer {
   transform: translateY(-50%);
   background: rgba(0,0,0,0);
 }
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #002244;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 
 
 
