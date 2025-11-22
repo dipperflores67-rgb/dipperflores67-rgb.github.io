@@ -20,7 +20,7 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -29,7 +29,7 @@ header nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px; /* espacio entre imagen y texto */
+  gap: 10px;
 }
 
 .logo-img {
@@ -46,15 +46,11 @@ header nav {
 /* 🔹 Navegación */
 .nav-links {
   list-style: none;
-  display: flex;          /* 🔹 Menú en fila */
+  display: flex;
   flex-direction: row;
-  gap: 1.5rem;            /* Espacio entre enlaces */
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
-}
-
-.nav-links li {
-  list-style: none;
 }
 
 .nav-links li a {
@@ -67,7 +63,7 @@ header nav {
   text-decoration: underline;
 }
 
-/* 🔹 Botón menú en móviles */
+/* 🔹 Botón menú móviles */
 .menu-toggle {
   display: none;
   background: none;
@@ -88,10 +84,10 @@ section {
   padding: 4rem 2rem;
 }
 
-/* 🔹 Tarjetas */
+/* 🔹 Tarjetas (MODIFICADO) */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 🔥 5 informes por fila */
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -112,12 +108,12 @@ section {
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* 🔹 Botones amarillos estilo logo */
+/* 🔹 Botones amarillos */
 .card a {
   display: inline-block;
   padding: 0.8rem 1.4rem;
-  background: #ffcc00;    /* Amarillo eléctrico */
-  color: #003366;         /* Azul oscuro */
+  background: #ffcc00;
+  color: #003366;
   text-decoration: none;
   border-radius: 10px;
   font-weight: bold;
@@ -126,14 +122,8 @@ section {
 }
 
 .card a:hover {
-  background: #e6b800;   /* Amarillo más oscuro */
-  transform: scale(1.08); /* Pequeño zoom */
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);  /* 5 informes por fila */
-  gap: 20px;  /* separación entre tarjetas */
+  background: #e6b800;
+  transform: scale(1.08);
 }
 
 /* 🔹 Formularios */
@@ -166,7 +156,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* 🔹 Imagen de portada */
+/* 🔹 Imagen portada */
 .facultad-img {
   width: 100%;
   max-height: 400px;
@@ -175,7 +165,7 @@ footer {
   margin-bottom: 20px;
 }
 
-/* 🔹 Galería / Carrusel */
+/* 🔹 Carrusel */
 .galeria {
   text-align: center;
   padding: 2rem;
@@ -183,7 +173,7 @@ footer {
 
 .slider {
   position: relative;
-  max-width: 600px;   /* ancho máximo del carrusel */
+  max-width: 600px;
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
@@ -197,7 +187,7 @@ footer {
 
 .imagenes img {
   width: 100%;
-  flex-shrink: 0;   /* evita que se deformen */
+  flex-shrink: 0;
 }
 
 .prev, .next {
@@ -220,6 +210,24 @@ footer {
 }
 
 /* 🔹 Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 informes por fila */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 informes por fila */
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 informe por fila */
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -240,4 +248,3 @@ footer {
     display: block;
   }
 }
-
