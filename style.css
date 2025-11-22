@@ -130,6 +130,12 @@ section {
   transform: scale(1.08); /* Pequeño zoom */
 }
 
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  /* 5 informes por fila */
+  gap: 20px;  /* separación entre tarjetas */
+}
+
 /* 🔹 Formularios */
 form {
   display: flex;
@@ -234,3 +240,4 @@ footer {
     display: block;
   }
 }
+
